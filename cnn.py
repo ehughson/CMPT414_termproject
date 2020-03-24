@@ -70,11 +70,6 @@ def conv_(img, conv_filter):
 ​
 			#extract regions of equal size to the filter 
 			curr_region = img[r:r+filter_size, c:c+filter_size]
-			"""
-			curr_region = img[r-numpy.uint16(numpy.floor(filter_size/2.0)): r+numpy.uint16(numpy.ceil(filter_siz/2.0)), 
-							  c- numpy.uint16(numpy.floor(filter_size/2.0)): c+numpy.uint16(numpy.ceil(filter_size/2.0))]
-			"""
-​
 			#element wise multiplication
 			curr_result = curr_region * conv_filter
 			conv_sum = numpy.sum(curr_result)
